@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+* a{
+    color: gray;
+}
+
+body{
+    background: white;
+}
+
+.title h1{
+    padding: 20px 0 ;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+    COLOR:gray;
+}
+
+.contenedor{
+    background: #FCF6E9;
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5,1fr);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.contenedor > .header,
+.contenedor > .content,
+.contenedor > .sidebar,
+.contenedor > .footer,
+.contenedor > div{
+    background: #fff;
+    padding: 20px;
+    
+}
+
+.contenedor .header,
+.contenedor .footer{
+    grid-column: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    background: #E4D9C7;
+    
+}
+
+.contenedor > .content{
+    grid-column: span 3;
+}
+
+.contenedor > .sidebar{
+    grid-column: span 2;
+    background: #E4D9C7;
+    color:gray;
+    display: flex;
+}
+.sidebar{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  2px 2px 2px 2px gray;
+   
+}
+.sidebar img{
+   padding: 5px;
+   height: 300px;
+   width: 300px;
+   box-shadow:  1px 1px 1px 1px gray;
+}
+.content .article{
+    background: #E4D9C7;
+    padding: 20px;
+    margin-top: 10px;
+    color: gray;
+    box-shadow: 0px 0px 2px 2px gray;
+}
+
+.content .article h1,
+.content .article p{
+    padding: 10px;
+}
+
+.contenedor .relatedpost{
+    background: #E3DDC6;
+    color: gray;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-shadow:  1px 1px 1px 1px gray;
+}
+
+.contenedor > .relatedpost:hover{
+    cursor: pointer;
+    color: #E3DDC6;
+    background: gray;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    background: #E3DDC6;
+    padding: 5px;
+    box-shadow:  2px 2px 2px 2px gray;
+}
+
+@media screen and (max-width: 950px)  {
+    .sidebar img{
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 813px)  {
+    .sidebar img{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 760px)  {
+  .contenedor  .sidebar{
+        display: none;
+    }
+    .contenedor > .content{
+        grid-column: span 5;
+    }
+
+
+    .contenedor .relatedpost{
+        grid-column: span 5;
+    }
+}
